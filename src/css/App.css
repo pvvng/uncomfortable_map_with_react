@@ -1,0 +1,208 @@
+.App {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+  margin: auto;
+  transition: all 1s;
+  min-height: 100vh;
+}
+
+div{
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,p,span,a{
+  margin: 0px;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.label{
+  background-color: white;
+  border: 0.5px solid #eee;
+  padding: 5px;
+  border-radius: 10px;
+  /* text-align: left; */
+  color: #3b3b3b;
+}
+
+.number{
+  color: rgb(247, 99, 99);
+  font-weight: bold;
+}
+
+.stickLabel{
+  text-align: center;
+  color: #3b3b3b;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.waiting-box{
+  width: 100%;
+  max-width: 720px;
+  height: 450px;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  transition: all 1s;
+}
+
+.under-box{
+  width: 100%;
+  max-width: 720px;
+  height: 450px;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.hide{
+  display: none;
+  opacity: 0;
+}
+
+.bg-color{
+  background-color: rgb(17, 17, 17);
+}
+
+/* .content-container{
+  width: 100%;
+  height: calc(100vh - 560px);
+  padding: 20px;
+} */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.carousel{
+  width: 200vw;
+  max-width: 1440px;
+  height: calc(100vh - 560px);
+  /* background-color: #eee; */
+  /* overflow: hidden; */
+  padding: 30px;
+
+}
+
+.carousel-move-right{
+  transform: translateX(100vw);    
+}
+
+.carousel-move-left{
+  transform: translateX(-100vw);    
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* context */
+
+.context-container{
+  width: 100%;
+  /* height: calc(100vh - 560px); */
+  padding: 30px;
+  /* display: flex; */
+  /* justify-content: center;  */
+  /* 수평 가운데 정렬 */
+  /* align-items: center;  */
+  /* 수직 가운데 정렬 */
+}
+
+.bold{
+  font-weight: bold;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.landing{
+  width: 100%;
+  max-width: 720px;
+  height: 100vh;
+  position: absolute;
+  z-index: 20;
+  background-color: #96caff;
+  padding: 100px;
+  top: 0;
+}
+
+.logoMargin{
+  margin-top: calc(50vh - 268px);
+}
+
+.tutorial-container1{
+  width: 100%;
+  max-width: 720px;
+  height: 100vh;
+  position: fixed;
+  float: left;
+  z-index: 20;
+  background-color: #96caff;
+  padding: 30px;
+  top: 0;
+  transition: all 1s;
+  /* overflow: hidden; */
+}
+
+.tutorial-container2{
+  width: 100%;
+  max-width: 720px;
+  height: 100vh;
+  position: fixed;
+  float: left;
+  z-index: 15;
+  background-color: #5d6e80;
+  padding: 30px;
+  top: 0;
+}
+
+.tutorial-inner{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding:40px;
+  background-color: #eee;
+}
+
+.tutorial-card{
+  /* margin-top: 50px; */
+  /* height: 20vh; */
+  padding: 20px;
+  height: 100%;
+  /* border: 1px solid #8f8f8f; */
+  border-radius: 20px;
+  background-color: white;
+}
+
+.tc1-move{
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.icon-angle{
+  font-size: 40px;
+  color: grey;
+}
+
+.icon-home{
+  font-size: 30px;
+  color: grey;
+}
+
+
+@media screen and (max-width : 248px) {
+  .bold{
+    font-size: 7px;
+    /* font-weight: bold; */
+  }
+  .icon-angle{
+    font-size: 10px;
+  }
+  .icon-home{
+    font-size: 8px;
+  }
+  .tutorial-inner{
+    padding:10px
+  }
+}
+
+/* end of css */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
