@@ -1,8 +1,7 @@
-import { Map,Polyline, MapMarker} from 'react-kakao-maps-sdk';
+import { Map, MapMarker} from 'react-kakao-maps-sdk';
 
 //map
 export default function ExistPromt({userLocation}){
-    // console.log(userLocation,'exist')
     return(
         <>
             <Map // 지도를 표시할 Container

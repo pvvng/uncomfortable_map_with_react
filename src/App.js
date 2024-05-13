@@ -7,10 +7,10 @@ import { LandingPage } from './page/LandingPage.js';
 import { DefaultLocation } from './page/DefaultLocation.js';
 import { MovingLocation } from './page/MovingLocation.js';
 import { TutorialPage } from './page/TutorialPage.js';
-import { DefaultSlideExplain } from './explain/DefaultExplain.js';
 import { useDispatch } from 'react-redux';
 import { updateMode, uploadLocation } from './store.js';
 import { Route, Routes, useNavigate } from 'react-router-dom';
+// import { loadData } from './test.js';
 
 const geolocationOptions = {
   enableHighAccuracy: true,
@@ -19,6 +19,7 @@ const geolocationOptions = {
 }
 
 function App() {
+
   // darkmode functions
   let nightmode = ['🌙','🌞'];
   let kNightmode = ['야간모드','원래대로'];
@@ -53,6 +54,7 @@ function App() {
       dispatch(uploadLocation([nowLat, nowLng]))
     }
   },[location]);
+
 
   return (
     <div className={`App ${mode[1]}`}>

@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import HidePromt from '../prompt/HidePromtComponet'; 
 import ExistPromt from "../prompt/ExistPromptComponent";
-import { contents } from "../contents";
 import { DefaultSlideExplain } from "../explain/DefaultExplain";
 
 export function DefaultLocation(){
