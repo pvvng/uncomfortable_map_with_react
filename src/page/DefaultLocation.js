@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import HidePromt from '../prompt/HidePromtComponet'; 
 import ExistPromt from "../prompt/ExistPromptComponent";
 import { DefaultSlideExplain } from "../explain/DefaultExplain";
+import { AjaxToAPI } from "../functions/ajaxToAPI";
 
 export function DefaultLocation(){
 
@@ -17,21 +18,22 @@ export function DefaultLocation(){
             setWaiting('hide');
         }
     })
-    
+
     return(
         <div>
-        {
-            Object.keys(userLocation).length === 0?
-            <div>
-                <HidePromt waiting={waiting} />
-                <DefaultSlideExplain />
-            </div>:
-            <div>
-                <ExistPromt userLocation={userLocation} />
-                <DefaultSlideExplain />
-            </div>
+            {
+                Object.keys(userLocation).length === 0?
+                <div>
+                    <HidePromt waiting={waiting} />
+                    <DefaultSlideExplain />
+                </div>:
+                <div>
+                    <ExistPromt userLocation={userLocation} />
+                    <DefaultSlideExplain />
+                </div>
+            }
+            <AjaxToAPI userLocation={userLocation} />
 
-        }
         </div>
     )
 
