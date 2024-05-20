@@ -62,6 +62,10 @@ h1,h2,h3,h4,h5,p,span,a{
   opacity: 0;
 }
 
+.d-none{
+  display: none;
+}
+
 .bg-color{
   background-color: rgb(17, 17, 17);
 }

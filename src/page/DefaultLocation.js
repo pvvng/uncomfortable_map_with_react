@@ -4,6 +4,7 @@ import HidePromt from '../prompt/HidePromtComponet';
 import ExistPromt from "../prompt/ExistPromptComponent";
 import { DefaultSlideExplain } from "../prompt/DefaultSlideExplain";
 import { AjaxToAPI } from "../prompt/AjaxToAPI";
+import GetLocalStoragePath from "../prompt/GetLocalStoragePath";
 
 export function DefaultLocation(){
 
@@ -19,6 +20,14 @@ export function DefaultLocation(){
         }
     })
 
+    let [localStoragePath, setLocalStoragePath] = useState(null)
+
+    useEffect(()=>{
+        let a = localStorage.getItem('저장된값')
+        let path = JSON.parse(a);
+        setLocalStoragePath(path);
+    },[])
+
     return(
         <div>
             {
@@ -27,11 +36,20 @@ export function DefaultLocation(){
                     <HidePromt waiting={waiting} />
                 </div>:
                 <div>
-                    <ExistPromt userLocation={userLocation} />
+                    {
+                        localStoragePath === null ?
+                        <ExistPromt userLocation={userLocation} />:
+                        <GetLocalStoragePath localStoragePath={localStoragePath}/>
+                    }
                 </div>
             }
             <AjaxToAPI userLocation={userLocation} />
+
+            {/* localstorage에 뭔가 있다면 map 하기 */}
+            
+
             <DefaultSlideExplain />
+
 
         </div>
     )

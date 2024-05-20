@@ -33,7 +33,7 @@ export default function CalPromt({count}){
                 psedoMovingPath.push(userLocation);
                 setMovingPath(psedoMovingPath);
                 dispatch(uploadPath(movingPath));
-            },10000);
+            },1000);
     
             if(movingPath.length > 1){
                 //이동 거리 구하기

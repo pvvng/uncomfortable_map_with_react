@@ -21,7 +21,7 @@ export function DefaultSlideExplain (){
     })
 
     return(
-        <div className="mt-5">
+        <div>
             <Accordion data-bs-theme={accordionMode}>
                 {
                     contents.map((a,i) => {

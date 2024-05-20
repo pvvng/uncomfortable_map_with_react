@@ -11,7 +11,6 @@ export function AjaxToAPI({userLocation}){
     let [cardMode, setCardMode] = useState('')
     
     useEffect(()=>{
-        console.log(nowMode)
         if(nowMode % 2 == 0){
             setCardMode('');
         }else{
@@ -145,10 +144,10 @@ export function AjaxToAPI({userLocation}){
         )
     }else{
         return(
-            <div className="card">
+            <div className={`card mt-5 mb-5 ${cardMode}`}>
                 <div className="card-body">
                     <h5 className="card-title">{nd.toLocaleDateString().slice(0,-1)}</h5>
-                    <h6 className="card-subtitle mb-2 text-body-secondary">{nd.getHours() - 1}시 기준</h6>
+                    <h6 className="card-subtitle mb-2">{nd.getHours() - 1}시 기준</h6>
                     <p>데이터를 불러오는데 실패했습니다</p>
                 </div>
             </div>

@@ -115,8 +115,6 @@ function App() {
           src={process.env.PUBLIC_URL + '/test_map/Lite3Run.png'} width={'50%'} alt= '측정중'/>
           {/* animate__slideOutLeft */}
         </div>:
-        count === 1?
-        <img src={process.env.PUBLIC_URL + '/test_map/Lite3.png'} width={'70%'} alt='측정완료'/>:
         null
       }
     </div>
