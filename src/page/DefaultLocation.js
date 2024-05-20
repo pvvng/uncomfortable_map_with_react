@@ -46,10 +46,8 @@ export function DefaultLocation(){
             <AjaxToAPI userLocation={userLocation} />
 
             {/* localstorage에 뭔가 있다면 map 하기 */}
-            
 
             <DefaultSlideExplain />
-
 
         </div>
     )

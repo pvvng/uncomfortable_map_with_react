@@ -36,9 +36,11 @@ export default function GetLocalStoragePath ({localStoragePath}){
     
 
     if(storedMovingPath !== 0){
+        console.log(localStoragePath[pathStatus])
         return(
             <div>
                 <div>
+                    <h2 className='card-title'>{localStoragePath[pathStatus].name}</h2>
                     <Map // 지도를 표시할 Container
                         id={`map`}
                         center={storedMovingPath[0]}
@@ -82,9 +84,10 @@ export default function GetLocalStoragePath ({localStoragePath}){
                         {
                             localStoragePath.map((lp,i)=>{
                                 return(
-                                    <div className='col-6 mb-3'>
+                                    <div className='col-6 mb-3' key={i}>
                                         <h5 style={{margin:'0px'}}>{lp.name}</h5>
-                                        <p className='mt-1' style={{margin:'0px', color:'grey'}}>{lp.date}</p>
+                                        <p style={{margin:'0px'}}>{lp.date}</p>
+                                        <p className='mt-2' style={{margin:'0px', color:'grey'}}>{lp.desciption}</p>
                                         <button className='btn btn-secondary mt-1' onClick={()=>{
                                             setPathStatus(i);
                                         }}>지도로 확인하기</button>

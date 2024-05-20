@@ -123,7 +123,7 @@ export function AjaxToAPI({userLocation}){
             <div className={`card mt-5 mb-5 ${cardMode}`}>
                 <div className="card-body">
                     <h5 className="card-title" style={{fontSize:'1.3rem', fontWeight:'bold'}}>{nd.toLocaleDateString().slice(0,-1)}</h5>
-                    <h6 className="card-subtitle mb-2">{nd.getHours() - 1}시 기준 날씨</h6>
+                    <h6 className="card-subtitle mb-2">{nd.getHours() - 1}시 기준 현재 위치 날씨</h6>
                     <div className='row'>
                     {
                         wheatherInfo.map(a => {
@@ -147,7 +147,7 @@ export function AjaxToAPI({userLocation}){
             <div className={`card mt-5 mb-5 ${cardMode}`}>
                 <div className="card-body">
                     <h5 className="card-title">{nd.toLocaleDateString().slice(0,-1)}</h5>
-                    <h6 className="card-subtitle mb-2">{nd.getHours() - 1}시 기준</h6>
+                    <h6 className="card-subtitle mb-2">{nd.getHours() - 1}시 기준 현재 위치 날씨</h6>
                     <p>데이터를 불러오는데 실패했습니다</p>
                 </div>
             </div>
