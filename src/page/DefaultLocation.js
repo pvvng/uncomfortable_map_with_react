@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import HidePromt from '../prompt/HidePromtComponet'; 
 import ExistPromt from "../prompt/ExistPromptComponent";
-import { DefaultSlideExplain } from "../explain/DefaultExplain";
-import { AjaxToAPI } from "../functions/ajaxToAPI";
+import { DefaultSlideExplain } from "../prompt/DefaultSlideExplain";
+import { AjaxToAPI } from "../prompt/AjaxToAPI";
 
 export function DefaultLocation(){
 
@@ -25,14 +25,13 @@ export function DefaultLocation(){
                 Object.keys(userLocation).length === 0?
                 <div>
                     <HidePromt waiting={waiting} />
-                    <DefaultSlideExplain />
                 </div>:
                 <div>
                     <ExistPromt userLocation={userLocation} />
-                    <DefaultSlideExplain />
                 </div>
             }
             <AjaxToAPI userLocation={userLocation} />
+            <DefaultSlideExplain />
 
         </div>
     )
