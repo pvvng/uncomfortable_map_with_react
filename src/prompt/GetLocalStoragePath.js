@@ -7,7 +7,10 @@ export default function GetLocalStoragePath ({localStoragePath}){
 
     let [pathStatus, setPathStatus] = useState(0)
     // console.log(pathStatus,'재렌더링됨')
-    let [storedMovingPath , setStoredMovingPath] = useState(0)
+    let [storedMovingPath , setStoredMovingPath] = useState(0);
+    let [LSP, setLSP] = useState([...localStoragePath]);
+
+    console.log(1111,LSP)
 
     useEffect(()=>{
         if (localStoragePath !== null){
@@ -17,7 +20,7 @@ export default function GetLocalStoragePath ({localStoragePath}){
 
     useEffect(()=>{
         setStoredMovingPath(localStoragePath[pathStatus].path)
-    },[setPathStatus])
+    },[pathStatus])
 
     // 다크모드 설정
     let [formCardStatus, setFormCardStatus] =  useState('');
@@ -36,12 +39,29 @@ export default function GetLocalStoragePath ({localStoragePath}){
             }
         }
     },[nowMode])
+
+    const handleDelete = (index) => {
+        if (localStoragePath.length === 1) {
+            localStorage.removeItem('저장된값');
+            alert('삭제되었습니다');
+            window.location.reload();
+        } else {
+            localStoragePath.splice(index, 1);
+            localStorage.setItem('저장된값', JSON.stringify(localStoragePath));
+            alert('삭제되었습니다');
+            window.location.reload();
+        }
+    };
     
+    // useEffect(()=>{
+        
+    // },[storedMovingPath])
     if(storedMovingPath !== 0){
         return(
             <div>
                 <div>
                     <h2 className='card-title m-2' style={{color:titleColor}}>{localStoragePath[pathStatus].name}</h2>
+                    
                     <Map // 지도를 표시할 Container
                         id={`map`}
                         center={storedMovingPath[0]}
@@ -83,7 +103,7 @@ export default function GetLocalStoragePath ({localStoragePath}){
                     <h3>저장된 지도</h3>
                     <div className='row'>
                         {
-                            localStoragePath.map((lp,i)=>{
+                            LSP.map((lp,i)=>{
                                 return(
                                     <div className='col-6 mb-3' key={i}>
                                         <h5 style={{margin:'0px'}}>{lp.name}</h5>
@@ -93,16 +113,7 @@ export default function GetLocalStoragePath ({localStoragePath}){
                                             setPathStatus(i);
                                         }}>지도로 확인하기</button>
                                         <button className='btn btn-danger m-1' onClick={()=>{
-                                            if(localStoragePath.length === 1){
-                                                //마지막 값을 삭제할경우엔 그냥 localstorage 지워버리기
-                                                localStorage.removeItem('저장된값')
-                                                alert('삭제되었습니다');
-                                                window.location.reload();
-                                            }else{                                            localStoragePath.splice(i,1)
-                                                localStorage.setItem('저장된값', JSON.stringify(localStoragePath))
-                                                alert('삭제되었습니다');
-                                                window.location.reload()
-                                            }
+                                            handleDelete(i)
                                         }}>삭제하기</button>
                                     </div>
                                 )
@@ -124,4 +135,5 @@ export default function GetLocalStoragePath ({localStoragePath}){
     }
 
 }
+
 

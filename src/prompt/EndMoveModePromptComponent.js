@@ -2,8 +2,11 @@ import React, { useEffect, useMemo, useState } from 'react';
 import '../css/App.css';
 import { Map, MapMarker, Polyline, } from 'react-kakao-maps-sdk';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export function EndMoveMode ({distances}){
+
+    let navigate = useNavigate();
 
     // 다크모드 설정
     let nowMode = useSelector(state => state.nowMode);
@@ -134,7 +137,9 @@ export function EndMoveMode ({distances}){
                         }
 
                         // 강제 새로고침 누르게 만들어서 state 초기화 시키기
-                        window.location.replace('/home');
+                        // window.location.replace('/');
+                        navigate('/')
+                        
                     }}>저장하기</button>
                 </div>
             </div> 
