@@ -85,7 +85,7 @@ function App() {
         <div className="container-fluid">
           <div className="navbar-brand" onClick={()=>{
             setCount(-1);
-            navigate('/home');
+            navigate('/');
           }}>
             <img src={process.env.PUBLIC_URL +'/MobilioLogo.png'} alt="Mobilio" width="auto" height="24" className="d-inline-block align-text-top"/>
             {/* Mobilio Map */}
@@ -100,7 +100,7 @@ function App() {
       <div className='p-2'>
         <button className='btn btn-secondary mx-1'
           onClick={()=>{
-            navigate('/home');
+            navigate('/');
             setCount(-1);
             }}>메인메뉴
         </button>
@@ -122,7 +122,7 @@ function App() {
       <Routes>
         <Route path='/test_map' element = {<LandingPage/>} />
         <Route path ='tutorial' element = {<TutorialPage/>} />
-        <Route path='/home' element = {<DefaultLocation />}/>
+        <Route path='/' element = {<DefaultLocation />}/>
         <Route path='/moving' element = {<MovingLocation count={count} />} />
       </Routes>
 
@@ -133,7 +133,7 @@ function App() {
           <p>다른 버튼을 클릭하면 이동 모드가 종료됩니다.</p>
           <p>이동 경로를 확인하고 싶으면 이동모드 종료 버튼을 클릭하세요.</p>
           <img className={`animate__animated animate__bounce`} style={{animationIterationCount:'infinite'}} 
-          src={process.env.PUBLIC_URL + '/test_map/Lite3Run.png'} width={'50%'} alt= '측정중'/>
+          src={process.env.PUBLIC_URL + '/running.png'} width={'50%'} alt= '측정중'/>
           {/* animate__slideOutLeft */}
         </div>:
         null

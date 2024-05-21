@@ -24,7 +24,7 @@ export function TutorialPage(){
                         <div className='col-sm-10' style={{margin:'auto'}}>
                             <div style={{height :'100%'}}>
                                 <h2 className='bold'>{contents[0].title}</h2>
-                                <img src={process.env.PUBLIC_URL + '/test_map/Lite3.png'} width={'100%'}/>
+                                <img src={process.env.PUBLIC_URL + '/Lite3.png'} width={'100%'}/>
                             </div>
                         </div>
                         <div className='col-sm-1' style={{marginTop:'auto', marginBottom:'auto'}} onClick={()=>{
@@ -46,7 +46,7 @@ export function TutorialPage(){
                         </div>
                         <div className='col-sm-10' style={{margin:'auto'}}>
                             <h2 className='bold'>{contents[1].title}</h2>
-                            <img src={process.env.PUBLIC_URL + '/test_map/Lite3Run.png'} width={'100%'}/>
+                            <img src={process.env.PUBLIC_URL + '/running.png'} width={'100%'}/>
                         </div>
                         <div className='col-sm-1' style={{marginTop:'auto', marginBottom:'auto'}} onClick={()=>{
                             navigate('/home');
