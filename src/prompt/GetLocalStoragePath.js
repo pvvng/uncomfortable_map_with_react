@@ -1,16 +1,18 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import '../css/App.css';
 import { Map, MapMarker, Polyline, } from 'react-kakao-maps-sdk';
-import { useSelector } from 'react-redux';
 
 export default function GetLocalStoragePath ({localStoragePath}){
 
     let [pathStatus, setPathStatus] = useState(0)
     // console.log(pathStatus,'재렌더링됨')
     let [storedMovingPath , setStoredMovingPath] = useState(0);
+    let [deleteBtn, setDeleteBtn] = useState(0);
     let [LSP, setLSP] = useState([...localStoragePath]);
 
-    console.log(1111,LSP)
+    useEffect(()=>{
+        setLSP(JSON.parse(localStorage.getItem('저장된값')))
+    },[deleteBtn])
 
     useEffect(()=>{
         if (localStoragePath !== null){
@@ -41,15 +43,17 @@ export default function GetLocalStoragePath ({localStoragePath}){
     },[nowMode])
 
     const handleDelete = (index) => {
+        setDeleteBtn(deleteBtn+1);
+        setPathStatus(0);
         if (localStoragePath.length === 1) {
             localStorage.removeItem('저장된값');
             alert('삭제되었습니다');
-            window.location.reload();
+            // window.location.reload();
         } else {
             localStoragePath.splice(index, 1);
             localStorage.setItem('저장된값', JSON.stringify(localStoragePath));
             alert('삭제되었습니다');
-            window.location.reload();
+            // window.location.reload();
         }
     };
     
@@ -57,6 +61,9 @@ export default function GetLocalStoragePath ({localStoragePath}){
         
     // },[storedMovingPath])
     if(storedMovingPath !== 0){
+        console.log(localStoragePath)
+        console.log(pathStatus)
+        console.log(storedMovingPath)
         return(
             <div>
                 <div>
@@ -99,10 +106,12 @@ export default function GetLocalStoragePath ({localStoragePath}){
                     </Map> 
                 </div>
 
-                <div className={`card mt-5 p-3 ${formCardStatus}`}>
+                {
+                    LSP !== null?
+                    <div className={`card mt-5 p-3 ${formCardStatus}`}>
                     <h3>저장된 지도</h3>
                     <div className='row'>
-                        {
+                        {   
                             LSP.map((lp,i)=>{
                                 return(
                                     <div className='col-6 mb-3' key={i}>
@@ -117,10 +126,12 @@ export default function GetLocalStoragePath ({localStoragePath}){
                                         }}>삭제하기</button>
                                     </div>
                                 )
-                            })
-                        }
-                    </div>
-                </div>
+                              })
+                            }
+                        </div>
+                    </div>: null
+                }        
+
             </div> 
         )
     }else{
