@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import HidePromt from '../prompt/HidePromtComponet'; 
 import ExistPromt from "../prompt/ExistPromptComponent";
 import { DefaultSlideExplain } from "../prompt/DefaultSlideExplain";
-import { AjaxToAPI } from "../prompt/AjaxToAPI";
+import { WheatherCardComponent } from "../prompt/WheatherCardComponent";
 import GetLocalStoragePath from "../prompt/GetLocalStoragePath";
 
 export function DefaultLocation(){
@@ -29,9 +29,10 @@ export function DefaultLocation(){
     },[])
 
     return(
+        // localstorage에서 마지막 값을 삭제할때 잠깐 발생하는 오류를 막기 위해 조건식 하나 더 추가
         <div>
             {
-                Object.keys(userLocation).length === 0?
+                Object.keys(userLocation).length === 0 || localStorage.getItem('저장된값') === '[]'?
                 <div>
                     <HidePromt waiting={waiting} />
                 </div>:
@@ -43,7 +44,7 @@ export function DefaultLocation(){
                     }
                 </div>
             }
-            <AjaxToAPI userLocation={userLocation} />
+            <WheatherCardComponent userLocation={userLocation} />
 
             {/* localstorage에 뭔가 있다면 map 하기 */}
 

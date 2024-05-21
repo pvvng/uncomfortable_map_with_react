@@ -28,12 +28,14 @@ export default function CalPromt({count}){
         let interval;
 
         if(count === 0){
+
+            //10초마다 현재 위치 저장
             interval = setInterval(()=>{
                 psedoMovingPath = [...movingPath];
                 psedoMovingPath.push(userLocation);
                 setMovingPath(psedoMovingPath);
                 dispatch(uploadPath(movingPath));
-            },1000);
+            },10000);
     
             if(movingPath.length > 1){
                 //이동 거리 구하기

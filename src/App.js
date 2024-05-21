@@ -27,14 +27,35 @@ function App() {
   let [mode, setMode] = useState(['','','']);
 
   useEffect(()=>{
-    if(stateNM % 2 === 0){
+
+    if(stateNM % 2 === 0 && stateNM !== 0){
       setMode(['','','']);
+      localStorage.setItem('mode','light');
     }
-    else{
+    else if(stateNM % 2 === 1 && stateNM !== 0){
       setMode(['bg-dark','bg-color','white']);
+      localStorage.setItem('mode','night');
     }
     dispatch(updateMode(stateNM));
+    
   },[stateNM])
+
+
+  useEffect(()=>{
+
+    if(localStorage.getItem('mode') === null){
+      localStorage.setItem('mode', 'light');
+    }
+
+    if(localStorage.getItem('mode') === 'light'){
+      setMode(['','','']);
+      setStateNM(0);
+    }else{
+      setMode(['bg-dark','bg-color','white']);
+      setStateNM(1);
+    }
+
+  },[])
 
   // !!!!!!!!!!!!!!!!!!!!!!!!!!!
   // 현재 location 받아오기

@@ -5,11 +5,9 @@ import { useSelector } from 'react-redux';
 
 export default function GetLocalStoragePath ({localStoragePath}){
 
-    
     let [pathStatus, setPathStatus] = useState(0)
     // console.log(pathStatus,'재렌더링됨')
     let [storedMovingPath , setStoredMovingPath] = useState(0)
-
 
     useEffect(()=>{
         if (localStoragePath !== null){
@@ -22,25 +20,28 @@ export default function GetLocalStoragePath ({localStoragePath}){
     },[setPathStatus])
 
     // 다크모드 설정
-    let nowMode = useSelector(state => state.nowMode);
     let [formCardStatus, setFormCardStatus] =  useState('');
+    let [titleColor, setTitleColor] = useState('black');
+
+    let nowMode = localStorage.getItem('mode');
 
     useEffect(()=>{
-        if(nowMode % 2 === 0){
-            setFormCardStatus('');
-        }else{
-            setFormCardStatus('text-bg-dark');
+        if(nowMode !== null){
+            if(nowMode === 'light'){
+                setFormCardStatus('');
+                setTitleColor('black');
+            }else{
+                setFormCardStatus('text-bg-dark');
+                setTitleColor('white');
+            }
         }
     },[nowMode])
-
     
-
     if(storedMovingPath !== 0){
-        console.log(localStoragePath[pathStatus])
         return(
             <div>
                 <div>
-                    <h2 className='card-title'>{localStoragePath[pathStatus].name}</h2>
+                    <h2 className='card-title m-2' style={{color:titleColor}}>{localStoragePath[pathStatus].name}</h2>
                     <Map // 지도를 표시할 Container
                         id={`map`}
                         center={storedMovingPath[0]}
@@ -88,9 +89,21 @@ export default function GetLocalStoragePath ({localStoragePath}){
                                         <h5 style={{margin:'0px'}}>{lp.name}</h5>
                                         <p style={{margin:'0px'}}>{lp.date}</p>
                                         <p className='mt-2' style={{margin:'0px', color:'grey'}}>{lp.desciption}</p>
-                                        <button className='btn btn-secondary mt-1' onClick={()=>{
+                                        <button className='btn btn-secondary m-1' onClick={()=>{
                                             setPathStatus(i);
                                         }}>지도로 확인하기</button>
+                                        <button className='btn btn-danger m-1' onClick={()=>{
+                                            if(localStoragePath.length === 1){
+                                                //마지막 값을 삭제할경우엔 그냥 localstorage 지워버리기
+                                                localStorage.removeItem('저장된값')
+                                                alert('삭제되었습니다');
+                                                window.location.reload();
+                                            }else{                                            localStoragePath.splice(i,1)
+                                                localStorage.setItem('저장된값', JSON.stringify(localStoragePath))
+                                                alert('삭제되었습니다');
+                                                window.location.reload()
+                                            }
+                                        }}>삭제하기</button>
                                     </div>
                                 )
                             })
