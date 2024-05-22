@@ -57,7 +57,6 @@ function App() {
 
   },[])
 
-  // !!!!!!!!!!!!!!!!!!!!!!!!!!!
   // 현재 location 받아오기
 
   let navigate = useNavigate();
@@ -134,7 +133,6 @@ function App() {
           <p>이동 경로를 확인하고 싶으면 이동모드 종료 버튼을 클릭하세요.</p>
           <img className={`animate__animated animate__bounce`} style={{animationIterationCount:'infinite'}} 
           src={process.env.PUBLIC_URL + '/running.png'} width={'50%'} alt= '측정중'/>
-          {/* animate__slideOutLeft */}
         </div>:
         null
       }

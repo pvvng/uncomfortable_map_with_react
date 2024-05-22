@@ -29,7 +29,9 @@ export function DefaultSlideExplain (){
                             <Accordion.Item eventKey={i} key={a.id}>
                                 <Accordion.Header><strong>{a.title}</strong></Accordion.Header>
                                 <Accordion.Body>
-                                    {a.content}
+                                    <div className="p-4">   
+                                        {a.content}
+                                    </div>
                                 </Accordion.Body>
                             </Accordion.Item>
                         )

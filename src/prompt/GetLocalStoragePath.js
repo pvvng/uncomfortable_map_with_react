@@ -1,11 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/App.css';
 import { Map, MapMarker, Polyline, } from 'react-kakao-maps-sdk';
 
 export default function GetLocalStoragePath ({localStoragePath}){
 
     let [pathStatus, setPathStatus] = useState(0)
-    // console.log(pathStatus,'재렌더링됨')
     let [storedMovingPath , setStoredMovingPath] = useState(0);
     let [deleteBtn, setDeleteBtn] = useState(0);
     let [LSP, setLSP] = useState([...localStoragePath]);
@@ -48,22 +47,14 @@ export default function GetLocalStoragePath ({localStoragePath}){
         if (localStoragePath.length === 1) {
             localStorage.removeItem('저장된값');
             alert('삭제되었습니다');
-            // window.location.reload();
         } else {
             localStoragePath.splice(index, 1);
             localStorage.setItem('저장된값', JSON.stringify(localStoragePath));
             alert('삭제되었습니다');
-            // window.location.reload();
         }
     };
     
-    // useEffect(()=>{
-        
-    // },[storedMovingPath])
     if(storedMovingPath !== 0){
-        console.log(localStoragePath)
-        console.log(pathStatus)
-        console.log(storedMovingPath)
         return(
             <div>
                 <div>
@@ -131,7 +122,6 @@ export default function GetLocalStoragePath ({localStoragePath}){
                         </div>
                     </div>: null
                 }        
-
             </div> 
         )
     }else{
@@ -144,7 +134,6 @@ export default function GetLocalStoragePath ({localStoragePath}){
             </>
         )
     }
-
 }
 
 
