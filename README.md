@@ -1,9 +1,13 @@
 # 프로젝트명
 > 간략한 프로젝트 소개 문구를 작성합니다.
 
+<<<<<<< HEAD
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
+=======
+~~저장된 지도 모두 삭제시 default location page 보이도록 변경하기~~
+>>>>>>> b2ee2e3b7eec31db1126ca70580254cb20cf79eb
 
 한 두 문단으로 프로젝트 소개 글을 작성합니다.
 
