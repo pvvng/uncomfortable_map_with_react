@@ -64,11 +64,11 @@
 - ### 5-1. 프로젝트 중 신경 쓴 부분
 
   - ##### 카카오 맵 API 사용과 Redux 상태 관리, localStorage에 이동 경로 저장, 관리하기
-  - [velog](https://velog.io/@pvvng/react-Kakao-map%EA%B3%BC-redux-%EA%B7%B8%EB%A6%AC%EA%B3%A0-localStorage)
+    [velog](https://velog.io/@pvvng/react-Kakao-map%EA%B3%BC-redux-%EA%B7%B8%EB%A6%AC%EA%B3%A0-localStorage)
   - ##### 공공데이터 API 활용
-  - [velog](https://velog.io/@pvvng/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0)
+    [velog](https://velog.io/@pvvng/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0)
   - ##### 커스텀 훅
-  - [velog](https://velog.io/@pvvng/%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
+    [velog](https://velog.io/@pvvng/%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
   - ##### 재사용 가능한 컴포넌트 / 함수
     - 이전에 진행한 토이 프로젝트 [불편한 가계부](https://github.com/pvvng/account_book_with_react) 에서 컴포넌트 구조화가 얼마나 중요한지 알게 되었습니다. 이번 프로젝트는 기획 단계에서 어떤 페이지에 어떤 기능이 필요한지, 어떤 함수가 전역적으로 사용될지를 노트에 적으면서 프로젝트 구조를 구체화했고, 그것을 프로젝트에 도입하면서 재사용이 가능한 컴포넌트와 함수를 제작했습니다. React 공부를 하면서 컴포넌트의 장점이 재사용이 가능하다는 것이라는 건 개념만 알고 있었고 실제로 장점이라 느낀 적은 없었는데, 이번 프로젝트에서 컴포넌트 / 함수 재사용의 위대함을 느꼈습니다. 코드를 짤 때 유사한 라인을 적는 것이 얼마나 피로한 일인지 알게 되었고, 이후에도 어떤 부분을 수정하면 더 깔끔한 코드를 만들 수 있을지 지속적으로 고민했습니다.
       
@@ -78,7 +78,6 @@
 
 - ### 5-1. 프로젝트 중 어려웠던 부분 && 프로젝트의 아쉬운 부분
 
-  - ##### 커스텀 훅
 
 
 ## 6. 후기
