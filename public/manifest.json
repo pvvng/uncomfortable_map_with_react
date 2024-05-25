@@ -1,19 +1,14 @@
 {
-  "short_name": "MoMap",
-  "name": "Mobilio Map",
+  "short_name": "불편한 지도",
+  "name": "불편한 지도",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
+      "src": "192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -23,5 +18,5 @@
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "id": "ahqlffldh!PWA",
-  "description": "모빌리오의 지도 앱, 모맵입니다."
+  "description": "실시간 위치 추적앱, 불편한 지도입니다."
 }

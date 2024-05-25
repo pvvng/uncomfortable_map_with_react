@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 .App {
   width: 100%;
   max-width: 720px;
@@ -5,6 +7,7 @@
   margin: auto;
   transition: all 1s;
   min-height: 100vh;
+  font-family: 'Do Hyeon', sans-serif;
 }
 
 div{
