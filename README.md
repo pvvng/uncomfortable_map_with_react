@@ -8,8 +8,7 @@
 <details>
   <summary>window 환경에서 설치하기</summary>
   <div align = 'center'>
-    <img src='https://github.com/pvvng/pvvng.github.io/assets/112927193/85f131a5-41ae-496e-aa15-5db551236de4' width='33%' />
-    <img src='https://github.com/pvvng/pvvng.github.io/assets/112927193/34e7f2a3-dbcd-484a-8136-89aff62374d1' width='33%' />
+    <img src='https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/bd517aa8-ce77-40d7-afc0-84742f20f196' width='50%' />
   </div>
 </details>
 
