@@ -64,11 +64,20 @@
 ## 4. 이용 방법과 주요 기능
 
 ### 메인 메뉴
-  - 현재 위치
-  - 다크 모드
-  - 아코디언 메뉴
-  - 현재 위치 날씨
-  - 저장된 지도 확인 및 삭제
+  - ##### 현재 위치 확인 && 저장된 지도 확인 및 삭제
+    <div align='center'>
+      <img src = '' width='33%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/f82ed2d7-60c0-4067-80fb-b2e8678ed939' width='33%'>
+    </div>  
+  - ##### 다크 모드 && 아코디언 메뉴
+    <div align='center'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/086d6efc-6065-476f-a92e-520c2f88b57b' width='33%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/50b7a04f-ae2c-44a8-a159-230ab1c83679' width='33%'>
+    </div>
+  - ##### 현재 위치 날씨 확인
+    <div align='center'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/fc6708e1-a4e6-44d4-b13c-e1c96e5c2faa' width='33%'>
+    </div>
 
 ### 이동 모드
 
