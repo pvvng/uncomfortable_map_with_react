@@ -48,7 +48,7 @@
         
 - #### file tree
   ```
-  ┣ 📂src
+    📦 src
     ┣ 📂css
     ┃ ┗ 📜App.css
     ┣ 📂functions
