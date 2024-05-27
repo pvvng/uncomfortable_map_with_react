@@ -97,25 +97,42 @@
 
 ## 4. 이용 방법과 주요 기능
 
-### 메인 메뉴
-  - ##### 현재 위치 확인 && 저장된 지도 확인 및 삭제
+## 메인 메뉴
+  - #### 현재 위치 확인 && 저장된 지도 확인 && 저장된 지도 삭제
     <div align='center'>
-      <img src = '' width='33%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/c17dd537-6a4c-422d-90be-c0f8ba912939' width='33%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/012e283f-7306-4ac3-af19-bd61fd2eac86' width='33%'>
       <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/f82ed2d7-60c0-4067-80fb-b2e8678ed939' width='33%'>
     </div>  
-  - ##### 다크 모드 && 아코디언 메뉴
+
+    - 저장된 지도가 없으면 현재 사용자의 위치를 보여줍니다.
+    - 저장된 지도가 있으면 버튼을 클릭해 저장된 지도를 보여줍니다. 지도는 갯수 제한 없이 저장 가능합니다. 지도 저장은 이동 모드 종료 탭에서 가능합니다.
+    - 삭제 버튼을 누르면 저장된 지도가 삭제됩니다.  
+    
+  - #### 다크 모드 && 아코디언 메뉴
     <div align='center'>
       <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/086d6efc-6065-476f-a92e-520c2f88b57b' width='33%'>
       <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/50b7a04f-ae2c-44a8-a159-230ab1c83679' width='33%'>
     </div>
-  - ##### 현재 위치 날씨 확인
+
+    - navbar의 다크 모드/원래대로 버튼을 클릭해 다크/라이트 모드를 선택할 수 있습니다.
+    - 메인페이지 하단 아코디언 메뉴에서 웹앱의 간단한 튜토리얼을 확인할 수 있습니다.
+      
+  - #### 현재 위치 날씨 확인
     <div align='center'>
       <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/fc6708e1-a4e6-44d4-b13c-e1c96e5c2faa' width='33%'>
-    </div>
+    </div>  
+    - 메인페이지 중간 현재 위치를 기준으로 한 날씨 데이터를 확인할 수 있습니다.
 
-### 이동 모드
-
-### 이동 모드 종료
+## 이동 모드 && 이동 모드 종료
+  <div align='center'>
+    <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/b314584a-d37e-4eab-afd2-ee47025ff19d' width='33%'>
+    <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/b2fa8926-ed04-4ee9-b56e-d3bf244dc2f6' width='33%'>
+  </div>
+  
+- 이동 모드 버튼을 클릭하여 현재 이동 경로 기록이 가능합니다. 다른 버튼을 클릭하면 이동 모드가 취소됩니다.
+- 이동 모드로 얻은 이동 경로를 저장하고 싶다면 이동 모드 종료 버튼을 클릭합니다. 이동 모드 종료 탭에선 현재 이동 경로와 경로의 날짜, 이름, 설명을 기입 가능한 form 을 작성 가능합니다.
+- 작성 완료 된 이동 경로는 메인페이지에서 확인 및 삭제가 가능합니다.
 
 
 ## 5. 프로젝트 회고
