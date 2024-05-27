@@ -29,8 +29,6 @@
 </details>
 
 
-
-
 ## 2. 개요
 - 프로젝트 이름 : 실시간 위치 추적 지도 - 🗺️ 불편한 지도
 - 개발 기간 : 2024.05.1 ~ 2024.05.22
@@ -47,6 +45,42 @@
         npm install react-bootstrap
         npm i --save @fortawesome/react-fontawesome
         npm install animate.css
+        
+- #### file tree
+  ```
+  ┣ 📂src
+    ┣ 📂css
+    ┃ ┗ 📜App.css
+    ┣ 📂functions
+    ┃ ┣ 📜calculateDistance.js
+    ┃ ┣ 📜fetchWheatherData.js
+    ┃ ┣ 📜translateToXY.js
+    ┃ ┗ 📜useWatchLocation.js
+    ┣ 📂page
+    ┃ ┣ 📜DefaultLocation.js
+    ┃ ┗ 📜MovingLocation.js
+    ┣ 📂prompt
+    ┃ ┣ 📜CalPromptComponent.js
+    ┃ ┣ 📜DefaultSlideExplain.js
+    ┃ ┣ 📜EndMoveModePromptComponent.js
+    ┃ ┣ 📜ExistPromptComponent.js
+    ┃ ┣ 📜GetLocalStoragePath.js
+    ┃ ┣ 📜HidePromtComponet.js
+    ┃ ┣ 📜StartMoveModePromptComponent.js
+    ┃ ┗ 📜WheatherCardComponent.js
+    ┣ 📜App.js
+    ┣ 📜App.test.js
+    ┣ 📜contents.js
+    ┣ 📜index.css
+    ┣ 📜index.js
+    ┣ 📜logo.svg
+    ┣ 📜reportWebVitals.js
+    ┣ 📜service-worker.js
+    ┣ 📜serviceWorkerRegistration.js
+    ┣ 📜setupTests.js
+    ┗ 📜store.js
+
+  ```
 
 ## 3. 프로젝트 설명
 
