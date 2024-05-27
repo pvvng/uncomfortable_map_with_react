@@ -138,9 +138,9 @@
 ## 메인 메뉴
   - #### 현재 위치 확인 && 저장된 지도 확인 && 저장된 지도 삭제
     <div align='center'>
-      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/c17dd537-6a4c-422d-90be-c0f8ba912939' width='33%'>
-      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/012e283f-7306-4ac3-af19-bd61fd2eac86' width='33%'>
-      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/f82ed2d7-60c0-4067-80fb-b2e8678ed939' width='33%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/c17dd537-6a4c-422d-90be-c0f8ba912939' width='31%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/012e283f-7306-4ac3-af19-bd61fd2eac86' width='31%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/f82ed2d7-60c0-4067-80fb-b2e8678ed939' width='31%'>
     </div>  
 
     - 저장된 지도가 없으면 현재 사용자의 위치를 보여줍니다.
