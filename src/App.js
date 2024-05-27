@@ -3,10 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import React, { useEffect, useState } from 'react';
 import useWatchLocation from './functions/useWatchLocation.js';
-import { LandingPage } from './page/LandingPage.js';
 import { DefaultLocation } from './page/DefaultLocation.js';
 import { MovingLocation } from './page/MovingLocation.js';
-import { TutorialPage } from './page/TutorialPage.js';
 import { useDispatch } from 'react-redux';
 import { updateMode, uploadLocation } from './store.js';
 import { Route, Routes, useNavigate } from 'react-router-dom';
@@ -119,8 +117,6 @@ function App() {
 
       {/* map */}
       <Routes>
-        <Route path='/test_map' element = {<LandingPage/>} />
-        <Route path ='tutorial' element = {<TutorialPage/>} />
         <Route path='/' element = {<DefaultLocation />}/>
         <Route path='/moving' element = {<MovingLocation count={count} />} />
       </Routes>
