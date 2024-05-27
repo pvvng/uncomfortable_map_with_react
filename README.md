@@ -15,17 +15,21 @@
 <details>
   <summary>ios 환경에서 설치하기</summary>
   <div align = 'center'>
-    <img src='https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/ed7521ea-e778-410e-809f-5ce4a22486eb' width='49%' />
-        <img src='https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/fc0fadd1-e276-4559-b23f-7dca2c6d7bea' width='49%' />
+    <img src='https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/ed7521ea-e778-410e-809f-5ce4a22486eb' width='30%' />
+        <img src='https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/fc0fadd1-e276-4559-b23f-7dca2c6d7bea' width='30%' />
   </div>
 </details>
 
 <details>
   <summary>android 환경에서 설치하기</summary>
   <div align='center'>
-    <img src='https://github.com/pvvng/pokemon_game_with_nextjs/assets/112927193/99d8824b-ba02-4cf0-897d-430c45a55176' width='30%' />
+    <img src='https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/502ba458-6e37-4e96-b711-b55c02e2974e' width='30%' />
+    <img src='https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/671b9aa6-f794-4209-9f6b-e91dce2eb765' width='30%' />
   </div>
 </details>
+
+
+
 
 ## 2. 개요
 - 프로젝트 이름 : 실시간 위치 추적 지도 - 🗺️ 불편한 지도
