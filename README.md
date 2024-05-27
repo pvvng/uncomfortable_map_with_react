@@ -20,7 +20,6 @@
   </div>
 </details>
 
-
 <details>
   <summary>android 환경에서 설치하기</summary>
   <div align='center'>
@@ -63,6 +62,65 @@
     - Git Flow 전략을 활용하여 프로젝트를 관리하고자 했습니다. Git을 활용한 버전 관리 전략을 미리 체득하는 것이 후일 큰 도움이 되리라 생각하여 최대한 Git Flow 전략의 흐름을 지키고자 노력하였습니다. 다만, realese, hotfix 브런치 사용은 위 프로젝트에 불필요한 사족이 되리라 판단하여 main, develop, feature 3개의 브런치만 이용하여 개발 진행 하였습니다.
 
 ## 4. 이용 방법과 주요 기능
+
+### 메인 메뉴
+  - 현재 위치
+  - 다크 모드
+  - 아코디언 메뉴
+  - 현재 위치 날씨
+  - 저장된 지도 확인 및 삭제
+
+### 이동 모드
+
+#### 이동 모드 종료
+
+
+## 2. 개요
+- 프로젝트 이름 : 실시간 위치 추적 지도 - 🗺️ 불편한 지도
+- 개발 기간 : 2024.05.1 ~ 2024.05.22
+- 개발 환경 : React, Redux toolkit
+- 사용한 오픈 API : [Kakao 지도 API](https://apis.map.kakao.com/) , [공공데이터 날씨 API](https://www.data.go.kr/iim/api/selectAPIAcountView.do)
+- 작업 관리 : Git (GitFlow)
+- 배포 : Vercel  
+- #### installed Library
+
+        npm install react-kakao-maps-sdk
+        npm install axios
+        npm install @reduxjs/toolkit@1.8.1 react-redux
+        npm install react-router-dom@6
+        npm install react-bootstrap
+        npm i --save @fortawesome/react-fontawesome
+        npm install animate.css
+
+## 3. 프로젝트 설명
+
+- ##### React.js와 Kakao map API를 활용하여 제작한 실시간 위치 추적 지도 앱입니다.
+  - 길치인 저는 지도 앱이 없으면 살아갈 수 없습니다. 구글링 중 자주 사용하는 카카오 지도의 오픈 API가 있다는 사실을 알게 되었고, 이를 활용해서 간단한 위치 추적 지도 어플을 만들어 보고자 하는 목표를 가지게 되었습니다.
+ 
+- ##### 현재 날씨 공공데이터를 사용합니다.
+  - 공공데이터 포털에서 특정 위치의 현재 날씨 데이터를 요청할 수 있는 오픈 API를 사용하여 사용자의 실시간 위치의 날씨 정보 확인이 가능하게 했습니다.
+ 
+- ##### 서버리스 웹 사이트입니다.
+  - 프론트엔드만으로 구현된 웹사이트입니다. 다만, localstorage 기능을 활용하여 사용자가 저장하고자 하는 이동 경로를 반영구적으로 저장 가능합니다. 저장한 이동 경로는 메인 페이지에서 버튼을 클릭하여 확인 가능합니다.
+ 
+- ##### PWA
+    - 실시간 위치 추적을 위해서는 사용자의 디바이스 이동이 필수적입니다. 그래서 사용자의 모바일 환경에 앱처럼 다운이 가능하게 만들고 싶었습니다. React Native 등의 앱 제작 기술을 알지 못하기에 대체 방안으로 PWA를 도입했습니다.
+ 
+- ##### Git Flow
+    - Git Flow 전략을 활용하여 프로젝트를 관리하고자 했습니다. Git을 활용한 버전 관리 전략을 미리 체득하는 것이 후일 큰 도움이 되리라 생각하여 최대한 Git Flow 전략의 흐름을 지키고자 노력하였습니다. 다만, realese, hotfix 브런치 사용은 위 프로젝트에 불필요한 사족이 되리라 판단하여 main, develop, feature 3개의 브런치만 이용하여 개발 진행 하였습니다.
+
+## 4. 이용 방법과 주요 기능
+
+### 메인 메뉴
+  - 현재 위치
+  - 다크 모드
+  - 아코디언 메뉴
+  - 현재 위치 날씨
+  - 저장된 지도
+
+### 이동 모드
+
+### 이동 모드 종료
 
 ## 5. 프로젝트 회고
 
