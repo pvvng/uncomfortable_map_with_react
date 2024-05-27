@@ -61,29 +61,6 @@
 - ##### Git Flow
     - Git Flow 전략을 활용하여 프로젝트를 관리하고자 했습니다. Git을 활용한 버전 관리 전략을 미리 체득하는 것이 후일 큰 도움이 되리라 생각하여 최대한 Git Flow 전략의 흐름을 지키고자 노력하였습니다. 다만, realese, hotfix 브런치 사용은 위 프로젝트에 불필요한 사족이 되리라 판단하여 main, develop, feature 3개의 브런치만 이용하여 개발 진행 하였습니다.
 
-## 4. 이용 방법과 주요 기능
-
-### 메인 메뉴
-  - ##### 현재 위치 확인 && 저장된 지도 확인 및 삭제
-    <div align='center'>
-      <img src = '' width='33%'>
-      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/f82ed2d7-60c0-4067-80fb-b2e8678ed939' width='33%'>
-    </div>  
-  - ##### 다크 모드 && 아코디언 메뉴
-    <div align='center'>
-      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/086d6efc-6065-476f-a92e-520c2f88b57b' width='33%'>
-      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/50b7a04f-ae2c-44a8-a159-230ab1c83679' width='33%'>
-    </div>
-  - ##### 현재 위치 날씨 확인
-    <div align='center'>
-      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/fc6708e1-a4e6-44d4-b13c-e1c96e5c2faa' width='33%'>
-    </div>
-
-### 이동 모드
-
-#### 이동 모드 종료
-
-
 ## 2. 개요
 - 프로젝트 이름 : 실시간 위치 추적 지도 - 🗺️ 불편한 지도
 - 개발 기간 : 2024.05.1 ~ 2024.05.22
@@ -121,15 +98,25 @@
 ## 4. 이용 방법과 주요 기능
 
 ### 메인 메뉴
-  - 현재 위치
-  - 다크 모드
-  - 아코디언 메뉴
-  - 현재 위치 날씨
-  - 저장된 지도
+  - ##### 현재 위치 확인 && 저장된 지도 확인 및 삭제
+    <div align='center'>
+      <img src = '' width='33%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/f82ed2d7-60c0-4067-80fb-b2e8678ed939' width='33%'>
+    </div>  
+  - ##### 다크 모드 && 아코디언 메뉴
+    <div align='center'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/086d6efc-6065-476f-a92e-520c2f88b57b' width='33%'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/50b7a04f-ae2c-44a8-a159-230ab1c83679' width='33%'>
+    </div>
+  - ##### 현재 위치 날씨 확인
+    <div align='center'>
+      <img src = 'https://github.com/pvvng/uncomfortable_map_with_react/assets/112927193/fc6708e1-a4e6-44d4-b13c-e1c96e5c2faa' width='33%'>
+    </div>
 
 ### 이동 모드
 
 ### 이동 모드 종료
+
 
 ## 5. 프로젝트 회고
 
