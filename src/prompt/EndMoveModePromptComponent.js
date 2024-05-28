@@ -1,8 +1,9 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/App.css';
 import { Map, MapMarker, Polyline, } from 'react-kakao-maps-sdk';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { handleAppendData, handleSetLocalStorage } from '../functions/setAndAppendLocalStorage';
 
 export function EndMoveMode ({distances}){
 
@@ -97,47 +98,30 @@ export function EndMoveMode ({distances}){
                     <div className='mb-2' style={{textAlign:'left'}}>
                         <label htmlFor='date'>날짜</label>
                         <input id='date' type='date' style={{width:'100%'}} onChange={(e)=>{
-                            let copy = {...settingLocalStorage};
-                            copy.date = e.target.value;
-                            setSettingLocalStorage(copy)
+                            let value = e.target.value;
+                            let type = 'date'
+                            handleAppendData(settingLocalStorage, setSettingLocalStorage, value, type);
                         }}/>
                     </div>
                     <div className='mb-2' style={{textAlign:'left'}}>
                         <label htmlFor='path-name'>경로 이름</label>
                         <input id='path-name' style={{width:'100%'}} onChange={(e)=>{
-                            let copy = {...settingLocalStorage};
-                            copy.name = e.target.value;
-                            setSettingLocalStorage(copy);
+                            let value = e.target.value;
+                            let type = 'name'
+                            handleAppendData(settingLocalStorage, setSettingLocalStorage, value, type);
                         }}/>
                     </div>
                     <div className='mb-2' style={{textAlign:'left'}}>
-                        <label htmlFor='path-name'>상세 설명</label>
-                        <textarea id='path-name' style={{width:'100%'}} onChange={(e)=>{
-                            let copy = {...settingLocalStorage};
-                            copy.desciption = e.target.value;
-                            setSettingLocalStorage(copy);    
+                        <label htmlFor='description'>상세 설명</label>
+                        <textarea id='description' style={{width:'100%'}} onChange={(e)=>{
+                            let value = e.target.value;
+                            let type = 'description'
+                            handleAppendData(settingLocalStorage, setSettingLocalStorage, value, type);
                         }}/>
                     </div>
                     <button className='btn btn-primary' onClick={()=>{
-                        let a = localStorage.getItem('저장된값')
-                        let 불러온값 = JSON.parse(a)
-                        if(JSON.parse(a) !== null){
-                            let copy = [...toArrLocalStorage];
-                            copy.push(settingLocalStorage);
-                            copy = [...불러온값, ...copy]
-                            // let copy = [...불러온값, ...toArrLocalStorage];
-                            setToArrLocalStorage(copy)
-                            localStorage.removeItem('저장된값');
-                            localStorage.setItem(`저장된값`, JSON.stringify(copy));
-                        }else{
-                            let copy = [...toArrLocalStorage];
-                            copy.push(settingLocalStorage);
-                            setToArrLocalStorage(copy)
-                            localStorage.setItem(`저장된값`, JSON.stringify(copy))
-                        }
+                        handleSetLocalStorage(toArrLocalStorage, settingLocalStorage, setToArrLocalStorage)
 
-                        // 강제 새로고침 누르게 만들어서 state 초기화 시키기
-                        // window.location.replace('/');
                         navigate('/')
                         
                     }}>저장하기</button>
@@ -156,4 +140,6 @@ export function EndMoveMode ({distances}){
     }
 
 }
+
+
 

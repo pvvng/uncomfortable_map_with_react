@@ -108,7 +108,7 @@ export default function GetLocalStoragePath ({localStoragePath}){
                                     <div className='col-6 mb-3' key={i}>
                                         <h5 style={{margin:'0px'}}>{lp.name}</h5>
                                         <p style={{margin:'0px'}}>{lp.date}</p>
-                                        <p className='mt-2' style={{margin:'0px', color:'grey'}}>{lp.desciption}</p>
+                                        <p className='mt-2' style={{margin:'0px', color:'grey'}}>{lp.description}</p>
                                         <button className='btn btn-secondary m-1' onClick={()=>{
                                             setPathStatus(i);
                                         }}>지도로 확인하기</button>

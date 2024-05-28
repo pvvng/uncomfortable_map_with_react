@@ -1,28 +1,34 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloudRain, faSnowflake, faSun, faTemperatureQuarter, faUmbrella, faWind } from '@fortawesome/free-solid-svg-icons';
 import { useSelector } from 'react-redux';
 import fetchWeatherData from '../functions/fetchWheatherData';
+import setWheatherData from '../functions/setWheatherData';
 
 export function WheatherCardComponent({userLocation}){
 
+    // 다크모드 설정
     let nowMode = useSelector(state => state.nowMode);
-    let [cardMode, setCardMode] = useState('')
+    let [cardMode, setCardMode] = useState('');
+
+    // 날씨데이터 저장
+    let [wheather, setWhether] = useState(null);
+    let [realWhetherData, setRealWhetherData] = useState([]);
+
+    // 현재 날짜
+    let nd = (new Date());
+
+    // 가공한 데이터 처리 및 저장하는 변수 / 상태
+    let temp = []
+    let [wheatherInfo, setWhetherInfo] = useState([]);
     
     useEffect(()=>{
-        if(nowMode % 2 == 0){
+        if(nowMode % 2 === 0){
             setCardMode('');
         }else{
             setCardMode('text-bg-dark');
         }
     })
-
-    let [wheather, setWhether] = useState(null);
-    let [realWhetherData, setRealWhetherData] = useState([]);
-
-    let nd = (new Date());
-
 
     //변경된 좌표를 기준으로 날씨 데이터 ajax
     useEffect(()=>{
@@ -47,54 +53,10 @@ export function WheatherCardComponent({userLocation}){
         }
     },[wheather])
 
-    let temp = []
-    let [wheatherInfo, setWhetherInfo] = useState([]);
-
     useEffect(() => {
-        // realwheater 스테이트가 바뀔때마다 진행
-        realWhetherData.map(a => {
-            // 데이터 가공
-            if(a.category === 'RN1' || a.category === 'PTY' || a.category === 'T1H' || a.category === 'WSD'){
-                switch (a.category){
-                    case 'RN1':
-                        a.category = '1시간 강수량';
-                        a.obsrValue = a.obsrValue + ' mm';
-                        a.iconType = faUmbrella;
-                        break;
-                    case 'PTY':
-                        a.category = '강수 형태';
-                        if(a.obsrValue === '0'){
-                            a.obsrValue = '맑음';
-                            a.iconType = faSun;
-                        }else if (a.obsrValue === '1'){
-                            a.obsrValue = '비';
-                            a.iconType = faCloudRain;
-                        }else if (a.obsrValue === '2'){
-                            a.obsrValue = '비/눈';
-                            a.iconType = faCloudRain;
-                        }else if (a.obsrValue === '3'){
-                            a.obsrValue = '눈';
-                            a.iconType = faSnowflake;
-                        }
-                        break;
-                    case 'T1H':
-                        a.category = '기온';
-                        a.iconType = faTemperatureQuarter;
-                        a.obsrValue = a.obsrValue + ' ℃'
-                        break;
-                    case 'WSD':
-                        a.category = '풍속';
-                        a.iconType = faWind;
-                        a.obsrValue = a.obsrValue + ' m/s'
-                        break;
-                }
-                // 필요한 데이터 조건이 모두 갖춰지면 set whetherinfo state에 가공된 데이터 저장
-                temp.push(a)
-                if(temp.length === 4){
-                    setWhetherInfo([...temp])
-                }
-            }
-        })
+        // 데이터 가공
+        setWheatherData(temp, realWhetherData, setWhetherInfo);
+
     },[realWhetherData])
 
     if(wheatherInfo.length !== 0){
