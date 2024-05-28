@@ -23,6 +23,7 @@ function App() {
   let kNightmode = ['야간모드','원래대로'];
   let [stateNM, setStateNM] = useState(0);
   let [mode, setMode] = useState(['','','']);
+  let [spinnerMode, setSpinnerMode] = useState('text-dark');
 
   useEffect(()=>{
 
@@ -47,9 +48,11 @@ function App() {
 
     if(localStorage.getItem('mode') === 'light'){
       setMode(['','','']);
+      setSpinnerMode('text-dark');
       setStateNM(0);
     }else{
       setMode(['bg-dark','bg-color','white']);
+      setSpinnerMode('');
       setStateNM(1);
     }
 
@@ -117,18 +120,18 @@ function App() {
 
       {/* map */}
       <Routes>
-        <Route path='/' element = {<DefaultLocation />}/>
+        <Route path='/' element = {<DefaultLocation mode={mode[1]} />}/>
         <Route path='/moving' element = {<MovingLocation count={count} />} />
       </Routes>
 
       {
         count === 0 ?
         <div style={{color:mode[2]}}>
-          <div className="m-4 spinner-border text-dark" role="status">
+          <div className={`m-4 spinner-border ${spinnerMode}`} role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
           <h4 className='bold'>측정중이에요</h4>
-          <p>다른 버튼을 클릭하면 이동 모드가 종료됩니다.</p>
+          <p style={{margin:0}}>다른 버튼을 클릭하면 이동 모드가 종료됩니다.</p>
           <p>이동 경로를 확인하고 싶으면 이동모드 종료 버튼을 클릭하세요.</p>
           {/* <img className={`animate__animated animate__bounce`} style={{animationIterationCount:'infinite'}} 
           src={process.env.PUBLIC_URL + '/running.png'} width={'50%'} alt= '측정중'/> */}

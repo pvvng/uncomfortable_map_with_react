@@ -6,7 +6,7 @@ import { DefaultSlideExplain } from "../prompt/DefaultSlideExplain";
 import { WheatherCardComponent } from "../prompt/WheatherCardComponent";
 import GetLocalStoragePath from "../prompt/GetLocalStoragePath";
 
-export function DefaultLocation(){
+export function DefaultLocation({mode}){
 
     // localstorage에서 저장된 path 불러오기
     let 불러오기 = localStorage.getItem('저장된값');
@@ -60,7 +60,7 @@ export function DefaultLocation(){
 
     return(
         // localstorage에서 마지막 값을 삭제할때 잠깐 발생하는 오류를 막기 위해 조건식 하나 더 추가
-        <div>
+        <div className={mode}>
             <button className={`btn btn-secondary mt-4 mb-4 ${btnStatus}`} onClick={()=>{
                 if(불러오기 !== null){
                     setNowLocation(nowLocation + 1);

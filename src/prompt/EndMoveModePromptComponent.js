@@ -12,12 +12,15 @@ export function EndMoveMode ({distances}){
     // 다크모드 설정
     let nowMode = useSelector(state => state.nowMode);
     let [formCardStatus, setFormCardStatus] =  useState('');
+    let [backgroundColor, setBackgroundColor] = useState('');
 
     useEffect(()=>{
         if(nowMode % 2 === 0){
             setFormCardStatus('');
+            setBackgroundColor('');
         }else{
             setFormCardStatus('text-bg-dark');
+            setBackgroundColor('bg-color');
         }
     },[nowMode])
 
@@ -53,7 +56,7 @@ export function EndMoveMode ({distances}){
 
     if(storedMovingPath.length > 1){
         return(
-            <div>
+            <div className={backgroundColor}>
                 <Map // 지도를 표시할 Container
                     id={`map`}
                     center={storedMovingPath[0]}
@@ -92,6 +95,7 @@ export function EndMoveMode ({distances}){
                 <button className='m-3 btn btn-secondary' onClick={()=>{
                     setHiddenInputCount(hiddenInputCount+1);
                 }}>현재 이동 경로 저장</button>
+
 
                 {/* hidden input box TO localstorage */}
                 <div className={`card p-2 mb-3 ${formCardStatus} ${hiddenInput}`} style={{transition:'all 1s'}}>
