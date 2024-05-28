@@ -54,6 +54,8 @@
     ┣ 📂functions
     ┃ ┣ 📜calculateDistance.js
     ┃ ┣ 📜fetchWheatherData.js
+    ┃ ┣ 📜setAndAppendLocalStorage.js
+    ┃ ┣ 📜setWheatherData.js
     ┃ ┣ 📜translateToXY.js
     ┃ ┗ 📜useWatchLocation.js
     ┣ 📂page
@@ -79,7 +81,6 @@
     ┣ 📜serviceWorkerRegistration.js
     ┣ 📜setupTests.js
     ┗ 📜store.js
-
   ```
 
 ## 3. 프로젝트 설명
