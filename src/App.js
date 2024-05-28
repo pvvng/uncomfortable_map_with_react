@@ -105,13 +105,13 @@ function App() {
             }}>메인메뉴
         </button>
         
-        <button className='btn btn-primary mx-1' onClick={()=>{
+        <button className='btn btn-info mx-1' onClick={()=>{
           navigate('/moving');
           setCount(0);
           }}>이동모드
         </button>
 
-        <button className='btn btn-danger mx-1' onClick={()=>{
+        <button className='btn btn-warning mx-1' onClick={()=>{
           navigate('/moving');
           setCount(1);
           }}>이동모드 종료
