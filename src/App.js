@@ -98,7 +98,7 @@ function App() {
 
       {/* buttons */}
       <div className='p-2 m-4'>
-        <button className='btn btn-secondary mx-1'
+        <button className='btn btn-success mx-1'
           onClick={()=>{
             navigate('/');
             setCount(-1);
