@@ -6,8 +6,7 @@
   text-align: center;
   margin: auto;
   transition: all 1s;
-  /* min-height: 100vh; */
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Do Hyeon', sans-serif;
 }
 
